@@ -308,4 +308,10 @@ footer a {
   footer {
     padding-left: 15px;
   }
+  .title {
+    transition: 0s;
+  }
+  .title:hover {
+    transition: 0s;
+  }
 }
