@@ -4,17 +4,10 @@ var toggleAltMenu = function () {
   if (selected) {
     altMenu.style.display = 'none';
     document.body.classList.remove('body_no_scroll');
-    menuIcon.style.display = 'none';
-    menuIcon.classList.remove('menu_icon_larger');
-    menuIcon.src = '/icons/menu.svg';
-    menuIcon.style.display = 'block';
   } else {
     altMenu.style.display = 'flex';
     document.body.classList.add('body_no_scroll');
-    menuIcon.style.display = 'none';
-    menuIcon.classList.add('menu_icon_larger');
-    menuIcon.src = '/icons/close.svg';
-    menuIcon.style.display = 'block';
+    menuIcon.src = '/icons/menu.svg';
   }
   selected = !selected;
 }
@@ -29,13 +22,8 @@ window.addEventListener('resize', function () {
   if (x > 800) {
     selected = false;
     altMenu.style.display = 'none';
-    menuIcon.style.display = 'none';
-    menuIcon.classList.remove('menu_icon_larger');
     menuIcon.src = '/icons/menu.svg';
   }
-  // } else {
-  //   menuIcon.src = '/icons/close.svg';
-  // }
 });
 
 var suggestBook = function () {
