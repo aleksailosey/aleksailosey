@@ -1,20 +1,31 @@
 <head>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'></meta>
-  <title>About Aleksai</title>
+  <title>Aleksai Losey</title>
+  <link rel='icon' href='/images/a.png'></link>
   <link rel='prefetch prerender' href='/'></link>
-  <link rel='prefetch prerender' href='/books'></link>
   <link rel='prefetch prerender' href='/running'></link>
   <link rel='prefetch prerender' href='/contact'></link>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato|Muli&display=swap'></link>
   <link rel='stylesheet' href='/styles/main.css'></link>
+  <script type='text/javascript' src='/scripts/main.js'></script>
 </head>
 <body>
+  <div class='alt_menu'>
+    <div class='body_font body_size nav_body_item blue nav_body_item_selected'>Home</div>
+    <a href='/books' class='body_font body_size nav_body_item blue'>Reading list</a>
+    <a href='/running' class='body_font body_size nav_body_item blue'>Running</a>
+    <a href='/contact' class='body_font body_size nav_body_item blue'>Contact</a>
+    <div class='nav_body_item'></div>
+    <a href='https://www.strava.com/athletes/48447345' target='_blank' rel='noreferrer' class='body_font body_size nav_body_item blue'>Follow me on Strava</a>
+    <a href='https://github.com/aleksailosey' target='_blank' rel='noreferrer' class='body_font body_size nav_body_item blue'>Follow me on Github</a>
+    <a href='https://twitter.com/intent/user?screen_name=aleksailosey' target='_blank' rel='noreferrer' class='body_font body_size nav_body_item blue'>Follow me on Twitter</a>
+  </div>
   <div class='nav_top'>
     <div class='nts'>
       <span class='title_font title_size off_black'>Aleksai Losey</span>
     </div>
     <div class='nts right_justify'>
-
+      <img class='menu_icon' src='/icons/menu.svg' onclick='toggleAltMenu();'></img>
     </div>
   </div>
   <div class='main'>
@@ -35,4 +46,5 @@
       </div>
     </div>
   </div>
+  <footer><a href='mailto:aleksailosey@gmail.com?subject=From%20your%20website'>aleksailosey@gmail.com</a></footer>
 </body>

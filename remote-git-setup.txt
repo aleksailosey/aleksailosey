@@ -1,0 +1,7 @@
+https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+OR USE PERSONAL ACCESS KEY
+
+git clone <repo>
+username
+access token as password
