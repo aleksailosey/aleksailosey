@@ -129,6 +129,10 @@ body {
   z-index: 2;
 }
 
+.menu_icon_larger {
+  width: 35px;
+}
+
 .menu_icon:hover {
   opacity: 0.75;
 }

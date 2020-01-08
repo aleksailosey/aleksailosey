@@ -1,12 +1,20 @@
 var selected = false;
 var toggleAltMenu = function () {
-  var altMenu = document.getElementsByClassName('alt_menu')[0];
+  var altMenu = document.getElementsByClassName('alt_menu')[0], menuIcon = document.getElementsByClassName('menu_icon')[0];
   if (selected) {
     altMenu.style.display = 'none';
     document.body.classList.remove('body_no_scroll');
+    menuIcon.style.display = 'none';
+    menuIcon.classList.remove('menu_icon_larger');
+    menuIcon.src = '/icons/menu.svg';
+    menuIcon.style.display = 'block';
   } else {
     altMenu.style.display = 'flex';
     document.body.classList.add('body_no_scroll');
+    menuIcon.style.display = 'none';
+    menuIcon.classList.add('menu_icon_larger');
+    menuIcon.src = '/icons/close.svg';
+    menuIcon.style.display = 'block';
   }
   selected = !selected;
 }
@@ -17,11 +25,17 @@ window.addEventListener('resize', function () {
       docElem = doc.documentElement,
       body    = doc.getElementsByTagName('body')[0],
       x       = win.innerWidth || docElem.clientWidth || body.clientWidth;
-  var altMenu = document.getElementsByClassName('alt_menu')[0];
+  var altMenu = document.getElementsByClassName('alt_menu')[0], menuIcon = document.getElementsByClassName('menu_icon')[0];
   if (x > 800) {
     selected = false;
     altMenu.style.display = 'none';
+    menuIcon.style.display = 'none';
+    menuIcon.classList.remove('menu_icon_larger');
+    menuIcon.src = '/icons/menu.svg';
   }
+  // } else {
+  //   menuIcon.src = '/icons/close.svg';
+  // }
 });
 
 var suggestBook = function () {
