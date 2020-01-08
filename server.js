@@ -16,7 +16,7 @@ function connect(callback) {
     @param callback: function, has access to dbo (the MongoClient instance)
                      to perform operations like dbo.collection('...').updateOne(...);
   */
-  MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, function(error, db) {
+  MongoClient.connect(url, { useNewUrlParser: true,  }, function(error, db) {
     if (error) throw error;
     let dbo = db.db('aleksailosey_db');
     callback(dbo);
