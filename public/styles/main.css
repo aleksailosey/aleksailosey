@@ -217,6 +217,7 @@ body {
   margin-bottom: 10px;
   outline: none;
   text-indent: 10px;
+  -webkit-appearance: none;
 }
 
 .s_input::placeholder {
