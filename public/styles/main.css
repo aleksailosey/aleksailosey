@@ -29,6 +29,20 @@ body {
   justify-content: flex-end;
 }
 
+.title {
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  transition: 0.5s;
+}
+
+.title:hover {
+  background-color: #3c3e42;
+  color: #e6ecf0;
+  padding: 0px 10px 0px 10px;
+  transition: 0.5s;
+}
+
 .title_font {
   font-family: 'Lato', sans-serif;
 }
@@ -218,6 +232,11 @@ body {
   outline: none;
   text-indent: 10px;
   -webkit-appearance: none;
+  transition: 0.2s;
+}
+
+.s_input:focus {
+  border-color: #47b59f;
 }
 
 .s_input::placeholder {
