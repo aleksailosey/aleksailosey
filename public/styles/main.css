@@ -305,4 +305,7 @@ footer a {
   .menu_icon {
     display: block;
   }
+  footer {
+    padding-left: 15px;
+  }
 }
