@@ -130,7 +130,7 @@ body {
 }
 
 .menu_icon_larger {
-  width: 35px;
+  width: 35px !important;
 }
 
 .menu_icon:hover {
