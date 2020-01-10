@@ -132,5 +132,8 @@ function transfer(bookTitle, callback) {
 
 init(function () {
 
+  transfer('The Obstacle is the Way', function () {
+
+  })
 
 });
