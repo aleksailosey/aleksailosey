@@ -1,6 +1,6 @@
 <head>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'></meta>
-  <title>Books</title>
+  <title>Fun stuff</title>
   <link rel='icon' href='/images/a.png'></link>
   <link rel='prefetch prerender' href='/'></link>
   <link rel='prefetch prerender' href='/running'></link>
@@ -8,7 +8,6 @@
   <link rel='prefetch prerender' href='/contact'></link>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato|Muli&display=swap'></link>
   <link rel='stylesheet' href='/styles/main.css'></link>
-  <script type='text/javascript' src='/scripts/request.js'></script>
   <script type='text/javascript' src='/scripts/main.js'></script>
   <script type='text/javascript' async src='https://www.googletagmanager.com/gtag/js?id=UA-143197236-5'></script>
   <script>
@@ -21,29 +20,14 @@
 <body>
   <div class='alt_menu'>
     <a href='/' class='body_font body_size nav_body_item blue'>Home</a>
-    <a href='/books' class='body_font body_size nav_body_item blue nav_body_item_selected'>Reading list</a>
+    <a href='/books' class='body_font body_size nav_body_item blue'>Reading list</a>
     <a href='/running' class='body_font body_size nav_body_item blue'>Running</a>
-    <a href='/stuff' class='body_font body_size nav_body_item blue'>Fun stuff</a>
+    <div class='body_font body_size nav_body_item blue  nav_body_item_selected'>Fun stuff</div>
     <a href='/contact' class='body_font body_size nav_body_item blue'>Contact</a>
     <div class='nav_body_item'></div>
     <a href='https://www.strava.com/athletes/48447345' target='_blank' rel='noreferrer' class='body_font body_size nav_body_item blue'>Follow me on Strava</a>
     <a href='https://github.com/aleksailosey' target='_blank' rel='noreferrer' class='body_font body_size nav_body_item blue'>Follow me on Github</a>
     <a href='https://twitter.com/intent/user?screen_name=aleksailosey' target='_blank' rel='noreferrer' class='body_font body_size nav_body_item blue'>Follow me on Twitter</a>
-  </div>
-  <div class='suggestion_wrap' onclick='event.target.style.display="none";return false;'>
-    <div class='suggestion' onclick='event.stopPropagation();'>
-      <div class='s_head'>
-        <span class='title_size title_font off_black'>Suggest a book</span>
-      </div>
-      <input id='title' placeholder='Book title' class='s_input body_size body_font off_black' maxlength='60'></input>
-      <input id='link' placeholder='Amazon link' class='s_input body_size body_font off_black'></input>
-      <div class='s_button' onclick='pushBook();'>
-        <span>Suggest</span>
-      </div>
-      <div class='s_button' onclick='document.getElementsByClassName("suggestion_wrap")[0].style.display="none";'>
-        <span>Nevermind</span>
-      </div>
-    </div>
   </div>
   <div class='nav_top'>
     <div class='nts'>
@@ -56,9 +40,9 @@
   <div class='main'>
     <div class='nav_body'>
       <a href='/' class='body_font body_size nav_body_item blue'>Home</a>
-      <a href='/books' class='body_font body_size nav_body_item blue nav_body_item_selected'>Reading list</a>
+      <a href='/books' class='body_font body_size nav_body_item blue'>Reading list</a>
       <a href='/running' class='body_font body_size nav_body_item blue'>Running</a>
-      <a href='/stuff' class='body_font body_size nav_body_item blue'>Fun stuff</a>
+      <div class='body_font body_size nav_body_item blue  nav_body_item_selected'>Fun stuff</div>
       <a href='/contact' class='body_font body_size nav_body_item blue'>Contact</a>
       <div class='nav_body_item'></div>
       <a href='https://www.strava.com/athletes/48447345' target='_blank' rel='noreferrer' class='body_font body_size nav_body_item blue'>Follow me on Strava</a>
@@ -67,20 +51,22 @@
     </div>
     <div class='body_content body_font middle_size damn_near_black'>
       <div class='buffy'></div>
-      <div>
-      I'm trying to read as often as possible. If you have a suggestion for me, <span style='cursor:pointer;' class='blue body_font middle_size underline' onclick='suggestBook();'>click here</span>.
+      Here is a small aggregate of stuff I find either compelling, interesting, or strange:
+      <div class='buffy'></div>
+      <div class='mb'>
+        <a href='https://www.wired.co.uk/article/inside-the-clone-factory' target='_blank' class='body_font middle_size blue on_hover_underline_disappear'>Inside the clone factory: the story of the Samwer brothers and Rocket Internet</a>
       </div>
-      <div id='list' class='book_section'>
-        <span class='title_font damn_near_black middle_size underline'>Reading list:</span>
-        {{#each books}}
-        <a href='{{this.link}}' class='body_font middle_size blue book_item' target='_blank'>{{this.title}}</a>
-        {{/each}}
+      <div class='mb'>
+        <a href='https://www.youtube.com/watch?v=W608u6sBFpo' target='_blank' class='body_font middle_size blue on_hover_underline_disappear'>Blitzscaling 18: Brian Chesky on Launching Airbnb and the Challenges of Scale</a>
       </div>
-      <div class='book_section'>
-        <span class='title_font damn_near_black middle_size underline'>Completed books:</span>
-        {{#each completed}}
-        <a href='{{this.link}}' class='body_font middle_size blue book_item' target='_blank'>{{this.title}}</a>
-        {{/each}}
+      <div class='mb'>
+        <a href='https://www.nytimes.com/2009/03/08/jobs/08bosses.html?_r=1' target='_blank' class='body_font middle_size blue on_hover_underline_disappear'>For Twitter C.E.O., Well-Orchestrated Accidents</a>
+      </div>
+      <div class='mb'>
+        <a href='https://www.bloomberg.com/news/features/2017-08-01/how-two-brothers-turned-seven-lines-of-code-into-a-9-2-billion-startup?cmpid=socialflow-twitter-businessweek&utm_content=businessweek&utm_campaign=socialflow-organic&utm_source=twitter&utm_medium=social' target='_blank' class='body_font middle_size blue on_hover_underline_disappear'>How Two Brothers Turned Seven Lines of Code Into a $9.2 Billion Startup</a>
+      </div>
+      <div class='mb'>
+        <a href='http://worrydream.com/ClimateChange/' target='_blank' class='body_font middle_size blue on_hover_underline_disappear'>What Can A Technologist Do About Climate Change?</a>
       </div>
     </div>
   </div>

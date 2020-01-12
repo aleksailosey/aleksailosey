@@ -7,6 +7,14 @@ body {
   background-color: #e6ecf0;
 }
 
+.on_hover_underline_disappear:hover {
+  text-decoration: none;
+}
+
+.mb {
+  margin-bottom: 15px;
+}
+
 .body_no_scroll {
   overflow-y: hidden;
 }
