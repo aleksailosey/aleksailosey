@@ -28,17 +28,19 @@ app.engine('hbs', hbs({
 
 app.set('view engine', 'hbs');
 
-const front   = require('./routes/front.js'),
-      running = require('./routes/running.js'),
-      contact = require('./routes/contact.js'),
-      books   = require('./routes/books.js'),
-      stuff   = require('./routes/stuff.js');
+const front    = require('./routes/front.js'),
+      running  = require('./routes/running.js'),
+      contact  = require('./routes/contact.js'),
+      books    = require('./routes/books.js'),
+      stuff    = require('./routes/stuff.js'),
+      thoughts = require('./routes/thoughts.js');
 
 app.use('/', front);
 app.use('/running', running);
 app.use('/contact', contact);
 app.use('/books', books);
 app.use('/stuff', stuff);
+app.use('/thoughts', thoughts);
 
 app.use(function (req, res) {
   res.redirect('/');

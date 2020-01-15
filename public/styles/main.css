@@ -5,6 +5,7 @@
 
 body {
   background-color: #e6ecf0;
+  overflow-x: hidden;
 }
 
 .on_hover_underline_disappear:hover {
