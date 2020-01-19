@@ -132,8 +132,5 @@ function transfer(bookTitle, callback) {
 
 init(function () {
 
-pullBook('rawr xD ;):);0 kees me', function () {
-  
-})
 
 });
