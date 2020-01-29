@@ -37,11 +37,6 @@ var pushBook = function () {
   var title = document.getElementById('title'),
       link  = document.getElementById('link');
   if (link && link.value && title && title.value) {
-    if (title.value.toLowerCase() === 'tightrope: americans reaching for hope') {
-      alert('Olivia, fuck off');
-      window.location.href = 'https://www.foxnews.com/';
-      return false;
-    }
     if (validURL(link.value)) {
       req({
         url: '/books/push',
