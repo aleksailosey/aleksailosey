@@ -60,12 +60,14 @@ io.set('transports', [
 var channels = {};
 
 io.sockets.on('connection', function (socket) {
+    console.log('connection')
     var initiatorChannel = '';
     if (!io.isConnected) {
         io.isConnected = true;
     }
 
     socket.on('new-channel', function (data) {
+      console.log('new channel')
         if (!channels[data.channel]) {
             initiatorChannel = data.channel;
         }
