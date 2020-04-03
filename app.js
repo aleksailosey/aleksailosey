@@ -53,7 +53,7 @@ var io = require('socket.io').listen(server, {
 });
 
 io.set('transports', [
-  'polling'
+  'polling',
     'websocket',
 
     // 'xhr-polling',
