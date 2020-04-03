@@ -69,13 +69,13 @@
 
 
         // var SIGNALING_SERVER = 'http://157.245.86.72:3000/';
-        var SIGNALING_SERVER = 'https://aleksailosey.com:3000/';
-        io.connect().emit('new-channel', {
+        var SIGNALING_SERVER = 'https://aleksailosey.com/';
+        io.connect(SIGNALING_SERVER).emit('new-channel', {
             channel: channel,
             sender: sender
         });
 
-        var socket = io.connect(channel);
+        var socket = io.connect(SIGNALING_SERVER + channel);
         // socket._connectTimer = setTimeout(function() {
         //     socket.close();
         // }, 10000)
