@@ -82,6 +82,9 @@
         socket.on('connect', function () {
           // clearTimeout(socket._connectTimer)
           alert('hey')
+          socket.emit('message', {
+            socket: new PeerConnection(socket)
+          })
             // setup peer connection & pass socket object over the constructor!
         });
 
