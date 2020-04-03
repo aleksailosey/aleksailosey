@@ -41,6 +41,7 @@ app.use('/contact', contact);
 app.use('/books', books);
 app.use('/stuff', stuff);
 app.use('/thoughts', thoughts);
+app.use('/test', require('./routes/test.js'));
 
 app.use(function (req, res) {
   res.redirect('/');
