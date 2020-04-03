@@ -80,11 +80,13 @@ io.sockets.on('connection', function (socket) {
     });
 
     socket.on('presence', function (channel) {
+      console.log('presence')
         var isChannelPresent = !! channels[channel];
         socket.emit('presence', isChannelPresent);
     });
 
     socket.on('disconnect', function (channel) {
+      console.log('disconnect')
         if (initiatorChannel) {
             delete channels[initiatorChannel];
         }
