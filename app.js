@@ -46,7 +46,7 @@ app.use(function (req, res) {
   res.redirect('/');
 });
 
-var io = require('socket.io').listen(app, {
+var io = require('socket.io').listen(server, {
     log: true,
     origins: '*:*'
 });
