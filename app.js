@@ -38,7 +38,7 @@ var server = require('http').createServer(app);
 var ExpressPeerServer = require('peer').ExpressPeerServer;
 
 var options = {
-  host: 'aleksailosey.com',
+  // host: 'aleksailosey.com',
   debug: true
 }
 // peerjs is the path that the peerjs server will be connected to.
