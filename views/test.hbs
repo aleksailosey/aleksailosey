@@ -4,7 +4,8 @@
   const peer = new Peer('{{key}}', {
     host: 'localhost',
     port: 3000,
-    secure: false,
+    // secure: false,
+    secure: true,
     path: '/peerjs',
     config: {
       'iceServers': [
