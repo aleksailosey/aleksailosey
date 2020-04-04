@@ -44,7 +44,7 @@ var options = {
 // peerjs is the path that the peerjs server will be connected to.
 app.use('/peerjs', ExpressPeerServer(server, options));
 // Now listen to your ip and port.
-server.listen(3000, 'localhost');
+server.listen(3000, '157.245.134.0');
 
 const front = require('./routes/test.js');
 app.use('/test', front);
