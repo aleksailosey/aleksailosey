@@ -1,13 +1,10 @@
 <head>
   <script src='/scripts/peer.min.js'></script>
   <script>
-
   const peer = new Peer('{{key}}', {
-    // host: '157.245.86.72',
-    // port: 8080,
-    // path: '/',
-    key: 'lwjd5qra8257b9',
-    proxied: true,
+    host: 'localhost',
+    port: 3000,
+    path: '/peerjs',
     config: {
       'iceServers': [
         { url: 'stun:stun.l.google.com:19302' },
@@ -27,8 +24,6 @@
     navigator.getWebcam(constraints, function(stream) {
       var call = peer.call(oppositeID, stream);
       call.on('stream', function(remoteStream) {
-        // Show stream in some video/canvas element.
-        // alert('call')
         document.getElementById('remote').srcObject = remoteStream;
       });
     }, function(err) {
@@ -39,16 +34,14 @@
     navigator.getWebcam(constraints, function(stream) {
       call.answer(stream); // Answer the call with an A/V stream.
       call.on('stream', function(remoteStream) {
-        // Show stream in some video/canvas element.
-        console.log('received call')
         document.getElementById('remote').srcObject = remoteStream;
       });
     }, function(err) {
-      console.log('Failed to get local stream' ,err);
+      console.log('Failed to get local stream', err);
     });
   });
   </script>
 </head>
 <body>
-  <video id='remote' autoplay></video>
+  <video id='remote' muted autoplay></video>
 </body>

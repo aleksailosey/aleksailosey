@@ -46,7 +46,7 @@ app.use('/peerjs', ExpressPeerServer(server, options));
 // Now listen to your ip and port.
 server.listen(3000, 'localhost');
 
-const front = require('./routes/front.js');
-app.use('/', front);
+const front = require('./routes/test.js');
+app.use('/test', front);
 
 // server.listen(3000);
