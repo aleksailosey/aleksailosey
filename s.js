@@ -1,2 +1,2 @@
 const { PeerServer } = require('peer');
-const peerServer = PeerServer({ port: 9000, path: '/' });
+const peerServer = PeerServer({ port: 9000, path: '/peerjs' });
