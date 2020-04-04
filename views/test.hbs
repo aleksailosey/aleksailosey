@@ -2,11 +2,11 @@
   <script src='/scripts/peer.min.js'></script>
   <script>
   const peer = new Peer('{{key}}', {
-    host: 'https://aleksailosey.com',
+    host: 'aleksailosey.com',
     port: 3000,
     // secure: false,
     secure: true,
-    path: '/peerjs',
+    path: '/',
     config: {
       'iceServers': [
         { url: 'stun:stun.l.google.com:19302' },
