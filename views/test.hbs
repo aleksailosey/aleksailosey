@@ -2,10 +2,9 @@
   <script src='/scripts/peer.min.js'></script>
   <script>
   const peer = new Peer('{{key}}', {
-    host: '157.245.86.72',
-    port: 9000,
-    secure: false,
-    // proxied: true,
+    host: 'apisoup.com',
+    secure: true,
+    port: 443,
     path: '/peerjs',
     config: {
       'iceServers': [
@@ -22,18 +21,20 @@
     },
     audio: true
   }
-  connection.on('open', function () {
-    navigator.getWebcam(constraints, function(stream) {
-      var call = peer.call(oppositeID, stream);
-      call.on('stream', function(remoteStream) {
-        document.getElementById('remote').srcObject = remoteStream;
-      });
-    }, function(err) {
-      console.log('Failed to get local stream' ,err);
+
+  navigator.getWebcam(constraints, function(stream) {
+    document.getElementById('local').srcObject = stream;
+    var call = peer.call(oppositeID, stream);
+    call.on('stream', function(remoteStream) {
+      document.getElementById('remote').srcObject = remoteStream;
     });
+  }, function(err) {
+    console.log('Failed to get local stream' ,err);
   });
+
   peer.on('call', function(call) {
     navigator.getWebcam(constraints, function(stream) {
+      document.getElementById('local').srcObject = stream;
       call.answer(stream); // Answer the call with an A/V stream.
       call.on('stream', function(remoteStream) {
         document.getElementById('remote').srcObject = remoteStream;
@@ -45,5 +46,40 @@
   </script>
 </head>
 <body>
-  <video id='remote' muted autoplay></video>
+  <style>
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #remote_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    position: relative;
+  }
+
+  #remote {
+    width: 90vw;
+    height: auto;
+    border-radius: 2px;
+  }
+
+  #local {
+    position: absolute;
+    height: 200px;
+    width: auto;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  </style>
+  <div id='remote_wrap'>
+    <video id='remote' muted autoplay></video>
+    <video id='local' muted autoplay></video>
+  </div>
 </body>
