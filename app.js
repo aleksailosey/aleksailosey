@@ -43,6 +43,17 @@ app.use('/stuff', stuff);
 app.use('/thoughts', thoughts);
 app.use('/test', require('./routes/test.js'));
 
+
+const { ExpressPeerServer } = require('peer'),
+      peerServer = ExpressPeerServer(server, {
+  debug: true,
+  path: '/',
+  proxied: true
+});
+
+app.use('/peerjs', peerServer);
+
+
 app.use(function (req, res) {
   res.redirect('/');
 });
