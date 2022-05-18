@@ -2,9 +2,9 @@
 
 ---
 
-Check out my website: [aleksai.com](https://aleksai.com)
-Follow me on Twitter: [@aleksailosey](https://twitter.com/aleksailosey)
-My SaaS development agency: [helpfully.co](https://helpfully.co)
+- Check out my website: [aleksai.com](https://aleksai.com)
+- Follow me on Twitter: [@aleksailosey](https://twitter.com/aleksailosey)
+- My SaaS development agency: [helpfully.co](https://helpfully.co)
 
 ## Some of my side projects
 
